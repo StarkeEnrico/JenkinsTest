@@ -1,7 +1,7 @@
-module "detvs01169" {
+module "detvs01214" {
   source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
   version                  = "0.0.31"
-  instance_name            = "detvs01169"
+  instance_name            = "detvs01214"
   instance_type            = "t3.micro"
   description              = "Temporary Test server"
   os_version               = "WindowsServer2019"
@@ -16,7 +16,7 @@ module "detvs01169" {
   system_data_volume_size  = "40"
   vpc_id                   = "vpc-02d82d26468e360b4"
   nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.48" ]
+  nic_private_ip_addresses = [ "10.99.23.71" ]
   security_group_scenario  = "Jenkins"
   security_group_suffix    = [ "Local","Datacenter","WAN" ]
   monitoring               = true
@@ -31,10 +31,10 @@ module "detvs01169" {
   }
 }
 
-module "detvs01172" {
+module "detvs01215" {
   source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
   version                  = "0.0.31"
-  instance_name            = "detvs01172"
+  instance_name            = "detvs01215"
   instance_type            = "t3.micro"
   description              = "Temporary Test server"
   os_version               = "WindowsServer2019"
@@ -49,7 +49,7 @@ module "detvs01172" {
   system_data_volume_size  = "40"
   vpc_id                   = "vpc-02d82d26468e360b4"
   nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.51" ]
+  nic_private_ip_addresses = [ "10.99.23.72" ]
   security_group_scenario  = "Jenkins"
   security_group_suffix    = [ "Local","Datacenter","WAN" ]
   monitoring               = true
@@ -64,241 +64,10 @@ module "detvs01172" {
   }
 }
 
-module "detvs01185" {
+module "detvs01216" {
   source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
   version                  = "0.0.31"
-  instance_name            = "detvs01185"
-  instance_type            = "t3.micro"
-  description              = "Temporary Test server"
-  os_version               = "WindowsServer2019"
-  os_type                  = "Core"
-  domain_name              = "domain.global"
-  availability_zone        = "B"
-  service_level_class      = "D"
-  owned_by                 = "enrico.starke"
-  managed_by               = "enrico.starke"
-  created_by               = "BITCloud/job/Apply_Terraform_Workspace"
-  cost_center              = "15.10"
-  system_data_volume_size  = "40"
-  vpc_id                   = "vpc-02d82d26468e360b4"
-  nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.54" ]
-  security_group_scenario  = "Jenkins"
-  security_group_suffix    = [ "Local","Datacenter","WAN" ]
-  monitoring               = true
-  ssm_document_domainjoin  = "SWO-BCWindowsADJoin-domain-global-d-996728e3d6"
-  elb_instance_locator     = "n/a"
-  backup                   = true
-  cloudwatch_sns_topics     = []
-  additional_tags          = {
-      "aws-migration-project-id" = "MPE14143"
-      "map-migrated"             = "d-server-abcd1234"
-      "bit:Reference"            = "JenkinsPiplineTest"
-  }
-}
-
-module "detvs01188" {
-  source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
-  version                  = "0.0.31"
-  instance_name            = "detvs01188"
-  instance_type            = "t3.micro"
-  description              = "Temporary Test server"
-  os_version               = "WindowsServer2019"
-  os_type                  = "Core"
-  domain_name              = "domain.global"
-  availability_zone        = "B"
-  service_level_class      = "D"
-  owned_by                 = "enrico.starke"
-  managed_by               = "enrico.starke"
-  created_by               = "BITCloud/job/Apply_Terraform_Workspace"
-  cost_center              = "15.10"
-  system_data_volume_size  = "40"
-  vpc_id                   = "vpc-02d82d26468e360b4"
-  nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.57" ]
-  security_group_scenario  = "Jenkins"
-  security_group_suffix    = [ "Local","Datacenter","WAN" ]
-  monitoring               = true
-  ssm_document_domainjoin  = "SWO-BCWindowsADJoin-domain-global-d-996728e3d6"
-  elb_instance_locator     = "n/a"
-  backup                   = true
-  cloudwatch_sns_topics     = []
-  additional_tags          = {
-      "aws-migration-project-id" = "MPE14143"
-      "map-migrated"             = "d-server-abcd1234"
-      "bit:Reference"            = "JenkinsPiplineTest"
-  }
-}
-
-module "detvs01189" {
-  source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
-  version                  = "0.0.31"
-  instance_name            = "detvs01189"
-  instance_type            = "t3.micro"
-  description              = "Temporary Test server"
-  os_version               = "WindowsServer2019"
-  os_type                  = "Core"
-  domain_name              = "domain.global"
-  availability_zone        = "B"
-  service_level_class      = "D"
-  owned_by                 = "enrico.starke"
-  managed_by               = "enrico.starke"
-  created_by               = "BITCloud/job/Apply_Terraform_Workspace"
-  cost_center              = "15.10"
-  system_data_volume_size  = "40"
-  vpc_id                   = "vpc-02d82d26468e360b4"
-  nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.58" ]
-  security_group_scenario  = "Jenkins"
-  security_group_suffix    = [ "Local","Datacenter","WAN" ]
-  monitoring               = true
-  ssm_document_domainjoin  = "SWO-BCWindowsADJoin-domain-global-d-996728e3d6"
-  elb_instance_locator     = "n/a"
-  backup                   = true
-  cloudwatch_sns_topics     = []
-  additional_tags          = {
-      "aws-migration-project-id" = "MPE14143"
-      "map-migrated"             = "d-server-abcd1234"
-      "bit:Reference"            = "JenkinsPiplineTest"
-  }
-}
-
-module "detvs01190" {
-  source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
-  version                  = "0.0.31"
-  instance_name            = "detvs01190"
-  instance_type            = "t3.micro"
-  description              = "Temporary Test server"
-  os_version               = "WindowsServer2019"
-  os_type                  = "Core"
-  domain_name              = "domain.global"
-  availability_zone        = "B"
-  service_level_class      = "D"
-  owned_by                 = "enrico.starke"
-  managed_by               = "enrico.starke"
-  created_by               = "BITCloud/job/Apply_Terraform_Workspace"
-  cost_center              = "15.10"
-  system_data_volume_size  = "40"
-  vpc_id                   = "vpc-02d82d26468e360b4"
-  nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.59" ]
-  security_group_scenario  = "Jenkins"
-  security_group_suffix    = [ "Local","Datacenter","WAN" ]
-  monitoring               = true
-  ssm_document_domainjoin  = "SWO-BCWindowsADJoin-domain-global-d-996728e3d6"
-  elb_instance_locator     = "n/a"
-  backup                   = true
-  cloudwatch_sns_topics     = []
-  additional_tags          = {
-      "aws-migration-project-id" = "MPE14143"
-      "map-migrated"             = "d-server-abcd1234"
-      "bit:Reference"            = "JenkinsPiplineTest"
-  }
-}
-
-module "detvs01191" {
-  source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
-  version                  = "0.0.31"
-  instance_name            = "detvs01191"
-  instance_type            = "t3.micro"
-  description              = "Temporary Test server"
-  os_version               = "WindowsServer2019"
-  os_type                  = "Core"
-  domain_name              = "domain.global"
-  availability_zone        = "B"
-  service_level_class      = "D"
-  owned_by                 = "enrico.starke"
-  managed_by               = "enrico.starke"
-  created_by               = "BITCloud/job/Apply_Terraform_Workspace"
-  cost_center              = "15.10"
-  system_data_volume_size  = "40"
-  vpc_id                   = "vpc-02d82d26468e360b4"
-  nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.60" ]
-  security_group_scenario  = "Jenkins"
-  security_group_suffix    = [ "Local","Datacenter","WAN" ]
-  monitoring               = true
-  ssm_document_domainjoin  = "SWO-BCWindowsADJoin-domain-global-d-996728e3d6"
-  elb_instance_locator     = "n/a"
-  backup                   = true
-  cloudwatch_sns_topics     = []
-  additional_tags          = {
-      "aws-migration-project-id" = "MPE14143"
-      "map-migrated"             = "d-server-abcd1234"
-      "bit:Reference"            = "JenkinsPiplineTest"
-  }
-}
-
-module "detvs01192" {
-  source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
-  version                  = "0.0.31"
-  instance_name            = "detvs01192"
-  instance_type            = "t3.micro"
-  description              = "Temporary Test server"
-  os_version               = "WindowsServer2019"
-  os_type                  = "Core"
-  domain_name              = "domain.global"
-  availability_zone        = "B"
-  service_level_class      = "D"
-  owned_by                 = "enrico.starke"
-  managed_by               = "enrico.starke"
-  created_by               = "BITCloud/job/Apply_Terraform_Workspace"
-  cost_center              = "15.10"
-  system_data_volume_size  = "40"
-  vpc_id                   = "vpc-02d82d26468e360b4"
-  nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.61" ]
-  security_group_scenario  = "Jenkins"
-  security_group_suffix    = [ "Local","Datacenter","WAN" ]
-  monitoring               = true
-  ssm_document_domainjoin  = "SWO-BCWindowsADJoin-domain-global-d-996728e3d6"
-  elb_instance_locator     = "n/a"
-  backup                   = true
-  cloudwatch_sns_topics     = []
-  additional_tags          = {
-      "aws-migration-project-id" = "MPE14143"
-      "map-migrated"             = "d-server-abcd1234"
-      "bit:Reference"            = "JenkinsPiplineTest"
-  }
-}
-
-module "detvs01193" {
-  source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
-  version                  = "0.0.31"
-  instance_name            = "detvs01193"
-  instance_type            = "t3.micro"
-  description              = "Temporary Test server"
-  os_version               = "WindowsServer2019"
-  os_type                  = "Core"
-  domain_name              = "domain.global"
-  availability_zone        = "B"
-  service_level_class      = "D"
-  owned_by                 = "enrico.starke"
-  managed_by               = "enrico.starke"
-  created_by               = "BITCloud/job/Apply_Terraform_Workspace"
-  cost_center              = "15.10"
-  system_data_volume_size  = "40"
-  vpc_id                   = "vpc-02d82d26468e360b4"
-  nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.62" ]
-  security_group_scenario  = "Jenkins"
-  security_group_suffix    = [ "Local","Datacenter","WAN" ]
-  monitoring               = true
-  ssm_document_domainjoin  = "SWO-BCWindowsADJoin-domain-global-d-996728e3d6"
-  elb_instance_locator     = "n/a"
-  backup                   = true
-  cloudwatch_sns_topics     = []
-  additional_tags          = {
-      "aws-migration-project-id" = "MPE14143"
-      "map-migrated"             = "d-server-abcd1234"
-      "bit:Reference"            = "JenkinsPiplineTest"
-  }
-}
-
-module "detvs01203" {
-  source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
-  version                  = "0.0.31"
-  instance_name            = "detvs01203"
+  instance_name            = "detvs01216"
   instance_type            = "t3.micro"
   description              = "Temporary Test server"
   os_version               = "WindowsServer2019"
@@ -313,7 +82,7 @@ module "detvs01203" {
   system_data_volume_size  = "40"
   vpc_id                   = "vpc-02d82d26468e360b4"
   nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.63" ]
+  nic_private_ip_addresses = [ "10.99.23.73" ]
   security_group_scenario  = "Jenkins"
   security_group_suffix    = [ "Local","Datacenter","WAN" ]
   monitoring               = true
@@ -328,10 +97,10 @@ module "detvs01203" {
   }
 }
 
-module "detvs01204" {
+module "detvs01214" {
   source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
   version                  = "0.0.31"
-  instance_name            = "detvs01204"
+  instance_name            = "detvs01214"
   instance_type            = "t3.micro"
   description              = "Temporary Test server"
   os_version               = "WindowsServer2019"
@@ -346,7 +115,7 @@ module "detvs01204" {
   system_data_volume_size  = "40"
   vpc_id                   = "vpc-02d82d26468e360b4"
   nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.64" ]
+  nic_private_ip_addresses = [ "10.99.23.71" ]
   security_group_scenario  = "Jenkins"
   security_group_suffix    = [ "Local","Datacenter","WAN" ]
   monitoring               = true
@@ -361,10 +130,10 @@ module "detvs01204" {
   }
 }
 
-module "detvs01209" {
+module "detvs01215" {
   source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
   version                  = "0.0.31"
-  instance_name            = "detvs01209"
+  instance_name            = "detvs01215"
   instance_type            = "t3.micro"
   description              = "Temporary Test server"
   os_version               = "WindowsServer2019"
@@ -379,7 +148,7 @@ module "detvs01209" {
   system_data_volume_size  = "40"
   vpc_id                   = "vpc-02d82d26468e360b4"
   nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.66" ]
+  nic_private_ip_addresses = [ "10.99.23.72" ]
   security_group_scenario  = "Jenkins"
   security_group_suffix    = [ "Local","Datacenter","WAN" ]
   monitoring               = true
@@ -394,10 +163,10 @@ module "detvs01209" {
   }
 }
 
-module "detvs01210" {
+module "detvs01216" {
   source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
   version                  = "0.0.31"
-  instance_name            = "detvs01210"
+  instance_name            = "detvs01216"
   instance_type            = "t3.micro"
   description              = "Temporary Test server"
   os_version               = "WindowsServer2019"
@@ -412,7 +181,7 @@ module "detvs01210" {
   system_data_volume_size  = "40"
   vpc_id                   = "vpc-02d82d26468e360b4"
   nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.67" ]
+  nic_private_ip_addresses = [ "10.99.23.73" ]
   security_group_scenario  = "Jenkins"
   security_group_suffix    = [ "Local","Datacenter","WAN" ]
   monitoring               = true
@@ -427,10 +196,10 @@ module "detvs01210" {
   }
 }
 
-module "detvs01211" {
+module "detvs01214" {
   source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
   version                  = "0.0.31"
-  instance_name            = "detvs01211"
+  instance_name            = "detvs01214"
   instance_type            = "t3.micro"
   description              = "Temporary Test server"
   os_version               = "WindowsServer2019"
@@ -445,7 +214,7 @@ module "detvs01211" {
   system_data_volume_size  = "40"
   vpc_id                   = "vpc-02d82d26468e360b4"
   nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.68" ]
+  nic_private_ip_addresses = [ "10.99.23.71" ]
   security_group_scenario  = "Jenkins"
   security_group_suffix    = [ "Local","Datacenter","WAN" ]
   monitoring               = true
@@ -460,10 +229,10 @@ module "detvs01211" {
   }
 }
 
-module "detvs01212" {
+module "detvs01215" {
   source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
   version                  = "0.0.31"
-  instance_name            = "detvs01212"
+  instance_name            = "detvs01215"
   instance_type            = "t3.micro"
   description              = "Temporary Test server"
   os_version               = "WindowsServer2019"
@@ -478,7 +247,7 @@ module "detvs01212" {
   system_data_volume_size  = "40"
   vpc_id                   = "vpc-02d82d26468e360b4"
   nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.69" ]
+  nic_private_ip_addresses = [ "10.99.23.72" ]
   security_group_scenario  = "Jenkins"
   security_group_suffix    = [ "Local","Datacenter","WAN" ]
   monitoring               = true
@@ -493,10 +262,10 @@ module "detvs01212" {
   }
 }
 
-module "detvs01212" {
+module "detvs01216" {
   source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
   version                  = "0.0.31"
-  instance_name            = "detvs01212"
+  instance_name            = "detvs01216"
   instance_type            = "t3.micro"
   description              = "Temporary Test server"
   os_version               = "WindowsServer2019"
@@ -511,7 +280,7 @@ module "detvs01212" {
   system_data_volume_size  = "40"
   vpc_id                   = "vpc-02d82d26468e360b4"
   nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.69" ]
+  nic_private_ip_addresses = [ "10.99.23.73" ]
   security_group_scenario  = "Jenkins"
   security_group_suffix    = [ "Local","Datacenter","WAN" ]
   monitoring               = true
@@ -526,10 +295,10 @@ module "detvs01212" {
   }
 }
 
-module "detvs01212" {
+module "detvs01214" {
   source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
   version                  = "0.0.31"
-  instance_name            = "detvs01212"
+  instance_name            = "detvs01214"
   instance_type            = "t3.micro"
   description              = "Temporary Test server"
   os_version               = "WindowsServer2019"
@@ -544,7 +313,7 @@ module "detvs01212" {
   system_data_volume_size  = "40"
   vpc_id                   = "vpc-02d82d26468e360b4"
   nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.69" ]
+  nic_private_ip_addresses = [ "10.99.23.71" ]
   security_group_scenario  = "Jenkins"
   security_group_suffix    = [ "Local","Datacenter","WAN" ]
   monitoring               = true
@@ -559,10 +328,10 @@ module "detvs01212" {
   }
 }
 
-module "detvs01212" {
+module "detvs01215" {
   source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
   version                  = "0.0.31"
-  instance_name            = "detvs01212"
+  instance_name            = "detvs01215"
   instance_type            = "t3.micro"
   description              = "Temporary Test server"
   os_version               = "WindowsServer2019"
@@ -577,7 +346,7 @@ module "detvs01212" {
   system_data_volume_size  = "40"
   vpc_id                   = "vpc-02d82d26468e360b4"
   nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.69" ]
+  nic_private_ip_addresses = [ "10.99.23.72" ]
   security_group_scenario  = "Jenkins"
   security_group_suffix    = [ "Local","Datacenter","WAN" ]
   monitoring               = true
@@ -592,10 +361,10 @@ module "detvs01212" {
   }
 }
 
-module "detvs01212" {
+module "detvs01216" {
   source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
   version                  = "0.0.31"
-  instance_name            = "detvs01212"
+  instance_name            = "detvs01216"
   instance_type            = "t3.micro"
   description              = "Temporary Test server"
   os_version               = "WindowsServer2019"
@@ -610,7 +379,7 @@ module "detvs01212" {
   system_data_volume_size  = "40"
   vpc_id                   = "vpc-02d82d26468e360b4"
   nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.69" ]
+  nic_private_ip_addresses = [ "10.99.23.73" ]
   security_group_scenario  = "Jenkins"
   security_group_suffix    = [ "Local","Datacenter","WAN" ]
   monitoring               = true
@@ -625,10 +394,10 @@ module "detvs01212" {
   }
 }
 
-module "detvs01212" {
+module "detvs01214" {
   source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
   version                  = "0.0.31"
-  instance_name            = "detvs01212"
+  instance_name            = "detvs01214"
   instance_type            = "t3.micro"
   description              = "Temporary Test server"
   os_version               = "WindowsServer2019"
@@ -643,7 +412,7 @@ module "detvs01212" {
   system_data_volume_size  = "40"
   vpc_id                   = "vpc-02d82d26468e360b4"
   nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.69" ]
+  nic_private_ip_addresses = [ "10.99.23.71" ]
   security_group_scenario  = "Jenkins"
   security_group_suffix    = [ "Local","Datacenter","WAN" ]
   monitoring               = true
@@ -658,10 +427,10 @@ module "detvs01212" {
   }
 }
 
-module "detvs01212" {
+module "detvs01215" {
   source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
   version                  = "0.0.31"
-  instance_name            = "detvs01212"
+  instance_name            = "detvs01215"
   instance_type            = "t3.micro"
   description              = "Temporary Test server"
   os_version               = "WindowsServer2019"
@@ -676,7 +445,7 @@ module "detvs01212" {
   system_data_volume_size  = "40"
   vpc_id                   = "vpc-02d82d26468e360b4"
   nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.69" ]
+  nic_private_ip_addresses = [ "10.99.23.72" ]
   security_group_scenario  = "Jenkins"
   security_group_suffix    = [ "Local","Datacenter","WAN" ]
   monitoring               = true
@@ -691,10 +460,10 @@ module "detvs01212" {
   }
 }
 
-module "detvs01212" {
+module "detvs01216" {
   source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
   version                  = "0.0.31"
-  instance_name            = "detvs01212"
+  instance_name            = "detvs01216"
   instance_type            = "t3.micro"
   description              = "Temporary Test server"
   os_version               = "WindowsServer2019"
@@ -709,7 +478,7 @@ module "detvs01212" {
   system_data_volume_size  = "40"
   vpc_id                   = "vpc-02d82d26468e360b4"
   nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.69" ]
+  nic_private_ip_addresses = [ "10.99.23.73" ]
   security_group_scenario  = "Jenkins"
   security_group_suffix    = [ "Local","Datacenter","WAN" ]
   monitoring               = true
@@ -724,10 +493,10 @@ module "detvs01212" {
   }
 }
 
-module "detvs01212" {
+module "detvs01214" {
   source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
   version                  = "0.0.31"
-  instance_name            = "detvs01212"
+  instance_name            = "detvs01214"
   instance_type            = "t3.micro"
   description              = "Temporary Test server"
   os_version               = "WindowsServer2019"
@@ -742,7 +511,73 @@ module "detvs01212" {
   system_data_volume_size  = "40"
   vpc_id                   = "vpc-02d82d26468e360b4"
   nic_subnet_locator       = "Infrastructure"
-  nic_private_ip_addresses = [ "10.99.23.69" ]
+  nic_private_ip_addresses = [ "10.99.23.71" ]
+  security_group_scenario  = "Jenkins"
+  security_group_suffix    = [ "Local","Datacenter","WAN" ]
+  monitoring               = true
+  ssm_document_domainjoin  = "SWO-BCWindowsADJoin-domain-global-d-996728e3d6"
+  elb_instance_locator     = "n/a"
+  backup                   = true
+  cloudwatch_sns_topics     = []
+  additional_tags          = {
+      "aws-migration-project-id" = "MPE14143"
+      "map-migrated"             = "d-server-abcd1234"
+      "bit:Reference"            = "JenkinsPiplineTest"
+  }
+}
+
+module "detvs01215" {
+  source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
+  version                  = "0.0.31"
+  instance_name            = "detvs01215"
+  instance_type            = "t3.micro"
+  description              = "Temporary Test server"
+  os_version               = "WindowsServer2019"
+  os_type                  = "Core"
+  domain_name              = "domain.global"
+  availability_zone        = "B"
+  service_level_class      = "D"
+  owned_by                 = "enrico.starke"
+  managed_by               = "enrico.starke"
+  created_by               = "BITCloud/job/Create_EC2_Windows_TST"
+  cost_center              = "15.10"
+  system_data_volume_size  = "40"
+  vpc_id                   = "vpc-02d82d26468e360b4"
+  nic_subnet_locator       = "Infrastructure"
+  nic_private_ip_addresses = [ "10.99.23.72" ]
+  security_group_scenario  = "Jenkins"
+  security_group_suffix    = [ "Local","Datacenter","WAN" ]
+  monitoring               = true
+  ssm_document_domainjoin  = "SWO-BCWindowsADJoin-domain-global-d-996728e3d6"
+  elb_instance_locator     = "n/a"
+  backup                   = true
+  cloudwatch_sns_topics     = []
+  additional_tags          = {
+      "aws-migration-project-id" = "MPE14143"
+      "map-migrated"             = "d-server-abcd1234"
+      "bit:Reference"            = "JenkinsPiplineTest"
+  }
+}
+
+module "detvs01216" {
+  source                   = "bitcloud-terraform.softwareone.com/BITCloud/module-ec2-instance-windows/aws"
+  version                  = "0.0.31"
+  instance_name            = "detvs01216"
+  instance_type            = "t3.micro"
+  description              = "Temporary Test server"
+  os_version               = "WindowsServer2019"
+  os_type                  = "Core"
+  domain_name              = "domain.global"
+  availability_zone        = "B"
+  service_level_class      = "D"
+  owned_by                 = "enrico.starke"
+  managed_by               = "enrico.starke"
+  created_by               = "BITCloud/job/Create_EC2_Windows_TST"
+  cost_center              = "15.10"
+  system_data_volume_size  = "40"
+  vpc_id                   = "vpc-02d82d26468e360b4"
+  nic_subnet_locator       = "Infrastructure"
+  nic_private_ip_addresses = [ "10.99.23.73" ]
   security_group_scenario  = "Jenkins"
   security_group_suffix    = [ "Local","Datacenter","WAN" ]
   monitoring               = true
